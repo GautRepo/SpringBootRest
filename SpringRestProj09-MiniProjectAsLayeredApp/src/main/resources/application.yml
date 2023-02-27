@@ -1,0 +1,19 @@
+server:
+  port: 4041
+  servlet:
+    context-path: /RestApp-MiniProject
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 100
+      minimum-idle: 10
+    password: root
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
